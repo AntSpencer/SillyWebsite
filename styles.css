@@ -1,0 +1,46 @@
+body {
+   margin: 0;
+   height: 200vh;
+   background-attachment: scroll;
+   background-image: linear-gradient(to bottom, pink, rgb(227, 75, 144));
+}
+.Title {
+   margin: 0;
+   width: auto;
+   height: 40vh;
+   border: black solid 2px;
+   background-color: pink;
+   background-image: url("Images/JollyHolly.jpg");
+   text-align: center;
+   h1 {
+      border: 2px solid black;
+      border-radius: 50px;
+      padding: 25px 50px 25px 50px;
+      background-color: rgba(155, 45, 118, 0.3);
+      margin: 0;
+      position: absolute;
+      top: 20%;
+      left: 50%;
+      -ms-transform: translate(-50%, -50%);
+      transform: translate(-50%, -50%);
+   }
+}
+.gridbox {
+   display: grid;
+   grid-template-columns: repeat(3, 1fr); /* 3 columns of equal width */
+   grid-gap: 100px; /* gap between grid items */
+   padding: 10px;
+}
+
+.grid-item {
+   h2 {
+      padding: 5px;
+      border: 1px solid black;
+      width: auto;
+   }
+   padding: 5px;
+   background-image: linear-gradient(to bottom, pink, rgb(251, 107, 251));
+   color: black;
+   border: 1px solid purple;
+   text-align: center;
+}
