@@ -1,34 +1,42 @@
 body {
    margin: 0;
-   height: 200vh;
+   height: auto; /* Adjusted for smaller screens */
+   min-height: 100vh; /* Ensures the body takes at least the full height of the viewport */
    background-attachment: scroll;
    background-image: linear-gradient(to bottom, pink, rgb(227, 75, 144));
 }
+
 .Title {
    margin: 0;
    width: auto;
-   height: 40vh;
+   height: 40vh; /* Adjusted for smaller screens */
+   min-height: 200px; /* Ensures the title section is at least 200px tall */
    border: black solid 2px;
    background-color: pink;
    background-image: url("Images/JollyHolly.jpg");
    text-align: center;
-   h1 {
-      border: 2px solid black;
-      border-radius: 50px;
-      padding: 25px 50px 25px 50px;
-      background-color: rgba(155, 45, 118, 0.3);
-      margin: 0;
-      position: absolute;
-      top: 20%;
-      left: 50%;
-      -ms-transform: translate(-50%, -50%);
-      transform: translate(-50%, -50%);
-   }
+   position: relative;
 }
+
+.Title h1 {
+   border: 2px solid black;
+   border-radius: 50px;
+   padding: 15px 30px; /* Adjusted padding for smaller screens */
+   background-color: rgba(155, 45, 118, 0.3);
+   margin: 0;
+   position: absolute;
+   top: 50%; /* Center vertically */
+   left: 50%; /* Center horizontally */
+   transform: translate(-50%, -50%); /* Center precisely */
+}
+
 .gridbox {
    display: grid;
-   grid-template-columns: repeat(3, 1fr); /* 3 columns of equal width */
-   grid-gap: 100px; /* gap between grid items */
+   grid-template-columns: repeat(
+      auto-fit,
+      minmax(200px, 1fr)
+   ); /* Adjusted for smaller screens */
+   grid-gap: 20px; /* Adjusted gap between grid items */
    padding: 10px;
 }
 
@@ -36,9 +44,8 @@ body {
    h2 {
       padding: 5px;
       border: 1px solid black;
-      width: auto;
    }
-   padding: 5px;
+   padding: 10px; /* Adjusted padding for smaller screens */
    background-image: linear-gradient(to bottom, pink, rgb(251, 107, 251));
    color: black;
    border: 1px solid purple;
